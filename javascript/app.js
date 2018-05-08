@@ -1,17 +1,13 @@
-// add source attr
-// add data-state = animate
-// add width = 200px
+var results;
+var image;
+var stillURL;
+var animateURL;
+var userInput = $("#userInput").val();
+var newButton;
 
-    var results;
-    // create image function**
-    // create image tag in html
-    var image = $("<img>");
-    var stillURL;
-    var animateURL;
-    var userInput;
-    var newButton = $("<button>");
-
-function imageTagAttr() {
+// create image function
+function addGif() {
+    image = $("<img>")
     // add attr to image tag
     image.attr("src", stillURL);
     image.attr("data-state", "still");
@@ -22,12 +18,16 @@ function imageTagAttr() {
 }
 
 function addButton() {
+    newButton = $("<button>");
     // add attributes to button
     newButton.attr("data-animal", userInput);
-    newButton.attr("class", "image-button");
+    newButton.attr("type", "button");
+    newButton.attr("class", "btn btn-outline-primary image-button");
 
     // put html in new button
     newButton.html(userInput);
+    $("#buttonsDiv").append(newButton);
+
 }
 
 // on click button
@@ -50,15 +50,11 @@ $("body").on("click", ".image-button", function () {
         console.log(response)
         // find image url in JSON
         results = response.data;
-
-        // create image function**
-        // create image tag in html
-        image = $("<img>");
         stillURL = results.images.fixed_height_still.url;
         animateURL = results.image_original_url;
 
-        // call imageTagAttr function to add attributes to image tag
-        console.log (imageTagAttr());
+        // call addGif function to add attributes to image tag
+        addGif();
 
         // body.on("click", ".gif", function())
         // on click gif
@@ -76,7 +72,6 @@ $("body").on("click", ".image-button", function () {
             }
         })
 
-
         // append img tag to html
         $("#imagesDiv").prepend(image);
     })
@@ -87,19 +82,21 @@ $("body").on("click", ".image-button", function () {
 // search will have id to bind event
 
 // on click 
-$("#search-button").on("click", function () {
-    userInput = $("#userInput").val();
+$("#search-button").on("click", function (event) {
+    event.preventDefault();
+
+    userInput = $("#userInput").val().trim();
     // create new button by calling addButton function
     addButton();
 
-    // create new image by calling imageTagAttr function
-    imageTagAttr();
+    // create new image by calling addGif function
+    addGif();
 
     // user input will be data-animal
     image.attr("data-animal", userInput);
-
-    // append to div of buttons
-    $("#imagesDiv").prepend(newButton);
+  
+    // clear search bar
+    $("#userInput").val("");
 
 })
 

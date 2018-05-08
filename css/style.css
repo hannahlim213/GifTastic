@@ -1,0 +1,160 @@
+/* font-family: 'Pangolin', cursive;
+font-family: 'Gloria Hallelujah', cursive; */
+
+img{
+    position:absolute;
+}
+#elephant {
+    
+    left: 229px;
+    top: -24px;
+}
+#monkey {
+    
+    right: 274px;
+    top: 13px;
+}
+
+#tiger{
+    right: 146px;
+    top: 16px;
+}
+
+#koala {
+    left: -6px;
+    top: -8px;
+}
+#sloth{
+    top: 16px;
+    right: -1px;
+}
+
+#camel{
+    top: 15px;
+    left: 139px;
+}
+
+.instructions {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding-bottom: 20px;
+}
+span{
+    font-family:'Gloria Hallelujah', cursive;
+    font-size:90px;
+    letter-spacing: -3px;
+}
+titleAnimals {
+    word-spacing: 1px;
+}
+#a{
+    color:#556272;
+    animation: myframes 3s ease-in-out 0s infinite;
+}
+
+@keyframes myframes {
+    from{
+        color:#556272;
+    }
+    to{
+        color:#47CDC6;
+    }
+}
+
+@keyframes myframes1 {
+    from{
+        color:#C7F65A;
+    }
+    to{
+        color:#47CDC6;
+    }
+}
+@keyframes myframes2 {
+    from{
+        color:#FF6A66;
+    }
+    to{
+        color:#556272;
+    }
+}
+
+@keyframes myframes3 {
+    from{
+        color:#FF6A66;
+    }
+    to{
+        color:#C7F65A;
+    }
+}
+
+#n{
+    color:#47CDC6;
+    animation: myframes3 5s ease-in-out 0s infinite;
+}
+
+#i{
+   color:#C7F65A;
+   animation: myframes1 3s ease-in-out 0s infinite;
+}
+
+#m{
+    color:#FF6A66;
+   animation: myframes3 4s ease-in-out 0s infinite;
+    
+}
+
+#l{
+    color:#556272;
+   animation: myframes2 7s ease-in-out 0s infinite;
+    
+}
+
+#s{
+    color:#47CDC6;
+   animation: myframes1 6s ease-in-out 0s infinite;
+    
+}
+
+#aa{
+    color:#C7F65A;
+    animation: myframes1 8s ease-in-out 0s infinite;
+ }
+
+button {
+    font-family:'Pangolin', cursive;
+}
+
+.image-button {
+    margin-left:10px;
+    margin-bottom: 5px;
+}
+
+@media screen and (max-width:1160px) {
+    .titleAnimals {
+        padding-top:100px;
+    }
+}
+
+@media screen and (max-width:729px) {
+    #monkey{
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width: 610px) {
+   #elephant{
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width: 487px) {
+    #tiger, #camel, #sloth, #koala{
+        visibility: hidden;
+    }
+    .titleAnimals {
+        padding-top:0px;
+    }
+    #a, #n, #i, #m, #aa, #l, #s {
+        font-size: 50px;
+    }
+}

@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
         crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Pangolin" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
 
 
@@ -18,14 +19,58 @@
 </head>
 
 <body>
-    <button class="image-button" data-animal="chicken"> Chicken Buttton</button>
+<div class="img">
+    <img width=150 id="elephant" src="images/elephant.png" alt="elephant">
+    <img width=100 id="koala" src="images/koala.png" alt="koala">
+    <img width=100 id="monkey" src="images/monkey.png" alt="monkey">
+    <img width=100 id="camel" src="images/camel.png" alt="camel">
+    <img width=100 id="tiger" src="images/tiger.png" alt="tiger">
+    <img width=120 id="sloth" src="images/sloth.jpg" alt="sloth">
+</div>
 
-    <button class="image-button" data-animal="cat"> Cat Buttton</button>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div align=center class="titleAnimals">
+                    <span id="a">A</span>
+                    <span id="n">N</span>
+                    <span id="i">I</span>
+                    <span id="m">M</span>
+                    <span id="aa">A</span>
+                    <span id="l">L</span>
+                    <span id="s">S</span>
+                </div>
+                <hr>
+                <br>
+<div class="instructions">
+    Click on an animal button below to see gifs. You can also add your own animal button via the search bar. Once the gifs appear, click on the gif to see the animation!
+</div>
+                <div id="buttonsDiv">
+                    <button type="button" class="btn btn-outline-primary image-button" data-animal="chicken">Chicken</button>
+                    <button type="button" class="btn btn-outline-primary image-button" data-animal="cat">Cat</button>
+                    <button type="button" class="btn btn-outline-primary image-button" data-animal="unicorn">Unicorn</button>
+                    <button type="button" class="btn btn-outline-primary image-button" data-animal="orangutan">Orangutan</button>
 
-    <input type"text" id="userInput" placeholder= "Search for gifs..">
-    <button id="search-button">Search</button>
-    
-    <div id="imagesDiv"></div>
+                </div>
+
+                <br>
+                <br>
+                <form>
+                    <div align=left class="searchBar">
+                        <input type "text" id="userInput" placeholder="Search for gifs..">
+                        <button id="search-button">Search</button>
+                    </div>
+                </form>
+                <br>
+                
+                    <div id="imagesDiv"></div>
+
+                
+            </div>
+        </div>
+    </div>
+
+
 
 
     <!-- jQuery and javascript -->
